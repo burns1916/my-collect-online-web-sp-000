@@ -1,10 +1,19 @@
-def my_collect(array)
+def my_collect(languages)
   i = 0
-  collection = []
-  while i < array.length
-    collection << yield(array[i].upcase)
-    collection << yield(array[i].split(" ").first)
+  new_lang = []
+  while i < languages.length
+    new_lang << yield(languages[i].upcase)
       i += 1
     end
-    collection
+    new_lang
+end
+
+def my_collect(names)
+  i = 0
+  new_names = []
+  while i < array.length
+    new_names << yield(array[i].split(" ").first)
+      i += 1
+    end
+    new_names
 end
